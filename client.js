@@ -16,9 +16,9 @@ function  addClickHandlers(){
 
 function addNewDiv(){
   numberOfClicks ++;
-  console.log("button click : #", numberOfClicks);
   let newButtons = ('<button class="swap">Swap</button><button class="delete">Delete</button>');
-  $('#container').append('<div class="buttonclicks"><p>' + numberOfClicks + '</p></div>');
+  $('#container').append('<div class="buttonclicks"></div>');
+  $('.buttonclicks').last().append('<p>' + numberOfClicks + '</p>');
   $('.buttonclicks').last().append(newButtons);
 }
 
