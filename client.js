@@ -5,11 +5,15 @@ $(document).ready(readyNow);
 
 function readyNow(){
   console.log('jQuery');
+  addClickHandlers();
+}
+
+function  addClickHandlers(){
   $('#generate').on('click', addNewDiv);
   $('#container').on('click', '.swap', changeColor);
   $('#container').on('click', '.delete', removeDiv);
 }
-
+  
 function addNewDiv(){
   numberOfClicks ++;
   console.log("button click : #", numberOfClicks);
